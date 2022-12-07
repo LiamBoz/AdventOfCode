@@ -16,6 +16,7 @@ testdata = """1000
 CalsList = []
 MaxCalsList = []
 MaxIncrements = 0
+CalSum = 0
 
 def GetInputFile():
     return input("File Name:")
@@ -50,12 +51,13 @@ def process():
 
 def MaxSort():
     global MaxIncrements
+    global CalSum
     if MaxIncrements < 3:
         MaxCalsList.append(max(CalsList))
         CalsList.remove(max(CalsList))
         MaxIncrements = MaxIncrements + 1
         MaxSort()
-    return MaxCalsList
+    return sum(MaxCalsList)
 
     
 
