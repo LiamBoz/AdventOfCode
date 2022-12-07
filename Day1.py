@@ -40,7 +40,7 @@ def SearchInput (input):
         if line == "":
             if incrementingCals >= totalCals:
                 totalCals = incrementingCals
-                CalsList.append(incrementingCals)
+            CalsList.append(incrementingCals)
             incrementingCals = 0
         else:
             incrementingCals = incrementingCals + int(line)
